@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+    <form>
+        <div class="form-row">
+            <div class="col">
+              <label for="FirstName" class="required"><b>Name</b></label>
+              <input type="text" class="form-control" id="FirstName">
+              <small  class="form-text text-muted">First</small>
+            </div>
+
+            <div class="col">
+              <input type="text" class="form-control" id="LastName">
+              <small class="form-text text-muted">Last</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="Experience" class="required"><b>Your Experience</b></label><br>
+            <span class="fa fa-star checked" data-value="1"></span>
+            <span class="fa fa-star checked" data-value="2"></span>
+            <span class="fa fa-star checked" data-value="3"></span>
+            <span class="fa fa-star checked" data-value="4"></span>
+            <span class="fa fa-star checked" data-value="5"></span>
+            <input type="hidden" name="rating" id="rating">          
+            <small id="experience" class="form-text text-muted">Overall, how would you rate your experience with us?</small>
+          </div>
+        <div style="display:flex; justify-content:space-between;">
+          <div style="width:100%; margin-right:5p;"> 
+        <table class="table table-striped">
+          <p class="required"  style="font-weight: bold;">How satisfied are you with</p>
+
+          <thead>
+            <tr>
+              <th></th>
+              <th class="center">very Unsatisfied</th>
+              <th class="center">Unsatisfied</th>
+              <th class="center">neutral</th>
+              <th class="center">Satisfied</th>
+              <th class="center">very Satisfied</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="center" id="purchase">
+              <td>Purchase</td>
+              <td><input type="radio" name="purchase-satisfaction" value="very-unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="purchase-satisfaction" value="unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="purchase-satisfaction" value="neutral" id="neutral"></td>
+              <td><input type="radio" name="purchase-satisfaction" value="satisfied" id="satisfied"></td>
+              <td><input type="radio" name="purchase-satisfaction" value="very-satisfied" id="very-satisfied"></td>
+            </tr>
+            
+            <tr class="center" id="service">
+              <td>Service</td>
+              <td><input type="radio" name="service-satisfaction" value="very-unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="service-satisfaction" value="unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="service-satisfaction" value="neutral" id="neutral"></td>
+              <td><input type="radio" name="service-satisfaction" value="satisfied" id="satisfied"></td>
+              <td><input type="radio" name="service-satisfaction" value="very-satisfied" id="very-satisfied"></td>
+            </tr>
+
+            <tr class="center" id="companyAll">
+              <td>company overall</td>
+              <td><input type="radio" name="companyoverall-satisfaction" value="very-unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="companyoverall-satisfaction" value="unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="companyoverall-satisfaction"value="neutral" id="neutral"></td>
+              <td><input type="radio" name="companyoverall-satisfaction" value="satisfied" id="satisfied"></td>
+              <td><input type="radio" name="companyoverall-satisfaction" value="very-satisfied" id="very-satisfied"></td>
+            </tr>
+        
+          </tbody>
+        </table>
+        </div>
+        </div>
+        <div style="display:flex; justify-content:space-between;">
+        <div style="width:100%; margin: left 2px;" >
+        <table class="table table-striped">
+          <b><p class="required" >How likely are you to</p></b>
+        
+          <thead>
+            <tr>
+              <th></th>
+              <th class="center">very Unlikely</th>
+              <th class="center">Unlikely</th>
+              <th class="center">neutral</th>
+              <th class="center">Likely</th>
+              <th class="center">Very Likely</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="center" id="buy">
+              <td id="buy">Buy from us again</td>
+              <td><input type="radio" name="Buy" value="very-unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="Buy" value="unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="Buy" value="neutral" id="neutral"></td>
+              <td><input type="radio" name="Buy" value="satisfied" id="satisfied"></td>
+              <td><input type="radio" name="Buy" value="very-satisfied" id="very-satisfied"></td>
+            </tr>
+            
+            <tr class="center" id="recommand">
+              <td>Recommend our product to others</td>
+              <td><input type="radio" name="Recommend" value="very-unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="Recommend" value="unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="Recommend" value="neutral" id="neutral"></td>
+              <td><input type="radio" name="Recommend" value="satisfied" id="satisfied"></td>
+              <td><input type="radio" name="Recommend" value="very-satisfied" id="very-satisfied"></td>
+            </tr>
+
+            <tr class="center" id="cRecommend">
+              <td>Recommend our company to others</td>
+              <td><input type="radio" name="company" value="very-unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="company" value="unsatisfied" id="unsatisfied"></td>
+              <td><input type="radio" name="company"value="neutral" id="neutral"></td>
+              <td><input type="radio" name="company" value="satisfied" id="satisfied"></td>
+              <td><input type="radio" name="company" value="very-satisfied" id="very-satisfied"></td>
+            </tr>
+            
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+        <div class="form-group">
+            <label for="additional-comments-or-suggestions"><b>Additional comments or suggestions</b></label>
+            <textarea type="text" name="additional" class="form-control" id="additional-comments-or-suggestions"></textarea>
+        </div>
+
+        <button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
+      </form>
+    <script>
+      function submitForm() {
+        const firstName = document.getElementById("FirstName").value;
+        console.log(`First Name+:+${FirstName}`);
+        const lastName = document.getElementById("LastName").value;
+        console.log(`Last Name+:+${LastName}`);
+        const RatingExperience = document.getElementById("rating").value;
+        $('.fa-star').click(function() {
+          var rating = $(this).data('value');
+          $('#rating').val(rating);
+          $('.fa-star').removeClass('checked');
+          $(this).prevAll('.fa-star').addBack().addClass('checked');
+        });
+        console.log(`Rating+:+${rating}`);
+        const purchaseSatisfaction = document.querySelector('input[name="purchase-satisfaction"]:checked').value;
+        console.log(`Purchase satisfaction+:+${purchase}`);
+
+        const serviceSatisfaction = document.querySelector('input[name="service-satisfaction"]:checked').value;
+        console.log(`Purchase satisfaction+:+${service}`);
+
+        const companyoverallSatisfaction = document.querySelector('input[name="company-overall"]:checked').value;
+        console.log(`companyoverall satisfaction+:+${companyAll}`);
+
+        const BuyAgain= document.querySelector('input[name="Buy"]:checked').value;
+        console.log(`Purchase satisfaction+:+${buy}`);
+
+        const RecommendUs = document.querySelector('input[name="Recommend"]:checked').value;
+        console.log(`Purchase satisfaction+:+${recommand}`);
+
+        const company = document.querySelector('input[name="company"]:checked').value;
+        console.log(`companyoverall satisfaction+:+${cRecommend}`);
+
+        const additionalCs = document.querySelector('textarea[name="additional"]:checked').value;
+        console.log(`companyoverall satisfaction+:+${additional-comments-or-suggestions}`);
+        }
+
+
+
+    </script>
+</body>
+</html>
